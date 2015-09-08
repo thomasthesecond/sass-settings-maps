@@ -1,6 +1,11 @@
 # Sass Settings Maps
 
-Use Sass maps with functions and dot notation.
+Use Sass maps with functions and dot notation. For example, this method allows
+you to write something like this:
+
+```scss
+width: setting('component.header.width');
+```
 
 This method relies on the following functions:
 
