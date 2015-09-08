@@ -55,6 +55,12 @@ settings. By default, the `setting` function looks for a map named
 something like so:
 
 ```scss
+// _settings.scss
+
+$settings: (
+  maxWidth: 1200px
+);
+
 // _masthead.scss
 
 $masthead: (
@@ -66,7 +72,8 @@ $masthead: (
 );
 
 .masthead {
-  height: setting('height.min', $masthead);
+  height: setting('height.min', $masthead); // component-specific setting
+  max-width: setting('maxWidth'); // 'global' setting
 
   @media (min-width: setting('breakpoint', $masthead)) {
     height: setting('height.max', $masthead);
