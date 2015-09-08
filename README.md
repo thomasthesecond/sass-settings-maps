@@ -86,6 +86,7 @@ and when compiled will read:
 ```css
 .masthead {
   height: 200px;
+  max-width: 1200px;
 
   @media (min-width: 50em) {
     height: 90vh;
