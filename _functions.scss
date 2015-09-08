@@ -1,0 +1,21 @@
+@import 'str-explode/str-explode';
+@import 'map-deep-get/map-deep-get';
+
+/// ----------------------------------------------------------------------------
+/// Creates a shortcut to return a setting value
+///
+/// @param  {List}     $props             - List of properties
+/// @param  {Map}      $map   [$settings] - Settings map
+/// @return {Function}
+/// ----------------------------------------------------------------------------
+@function setting($props, $map: $settings) {
+  $props-list: str-explode($props, $delimiter: '.');
+
+  @if length($props-list) > 1 {
+    @return map-get-deep($map, $props-list);
+
+  } @else {
+    @return map-get($map, nth($props, 1));
+
+  }
+}
