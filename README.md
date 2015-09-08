@@ -106,7 +106,7 @@ $settings: (
           default: #999,
           hover: #666
         )
-      )
+      ),
       width: (
         min: 320px,
         max: 1200px
