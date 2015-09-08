@@ -93,3 +93,29 @@ and when compiled will read:
   }
 }
 ```
+
+You can nest as far you'd like.
+
+```scss
+$settings: (
+  components: (
+    header: (
+      color: (
+        background: #fff,
+        link: (
+          default: #999,
+          hover: #666
+        )
+      )
+      width: (
+        min: 320px,
+        max: 1200px
+      )
+    )
+  )
+);
+
+.header-link {
+  color: setting('components.header.color.link.default');
+}
+```
